@@ -31,6 +31,7 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
+    followRedirect: true
 
   - id: lf-dav
     name: Baïkal
@@ -38,7 +39,7 @@ monitors:
     url: 'https://dav.lilyfeather.es'
     method: GET
     expectStatus: 200
-    followRedirect: true # should fetch follow redirects, default=false
+    followRedirect: true
 
 
   - id: lf-calibre
@@ -47,6 +48,7 @@ monitors:
     url: 'https://books.lilyfeather.es'
     method: GET
     expectStatus: 200
+    followRedirect: true
 
   - id: lf-dav
     name: Bloben
@@ -54,5 +56,5 @@ monitors:
     url: 'https://calendar.lilyfeather.es'
     method: GET
     expectStatus: 200
-    followRedirect: true # should fetch follow redirects, default=false
+    followRedirect: true
 
