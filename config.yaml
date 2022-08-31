@@ -25,8 +25,8 @@ monitors:
     linkable: true # allows the title to be a link, default=true
 
   - id: lf-files
-    name: Archivos
-    description: 'Nextcloud'
+    name: Nextcloud
+    description: 'Archivos en la nube'
     url: 'https://files.lilyfeather.es'
     method: GET
     expectStatus: 200
