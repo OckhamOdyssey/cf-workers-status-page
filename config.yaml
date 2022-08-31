@@ -38,6 +38,8 @@ monitors:
     url: 'https://dav.lilyfeather.es'
     method: GET
     expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
+
 
   - id: lf-calibre
     name: Calibre
@@ -52,3 +54,5 @@ monitors:
     url: 'https://calendar.lilyfeather.es'
     method: GET
     expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
+
