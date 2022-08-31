@@ -1,39 +1,54 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  url: 'https://status.lilyfeather.es' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: 'Todos los sistemas operativos'
+  notAllmonitorsOperational: 'Algunos servicios no están operativos'
+  monitorLabelOperational: 'Operativo'
+  monitorLabelNotOperational: 'No operativo'
+  monitorLabelNoData: 'Sin datos'
+  dayInHistogramNoData: 'Sin datos'
+  dayInHistogramOperational: 'Todo correcto'
+  dayInHistogramNotOperational: ' incidente(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: odiseageek # unique identifier
+    name: Odisea Geek
+    description: 'Blog personal. Jekyll hosteado en GitHub Pages' # default=empty
+    url: 'https://odiseageek.es/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: lf-files
+    name: Archivos
+    description: 'Nextcloud'
+    url: 'https://files.lilyfeather.es'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: lf-dav
+    name: Baïkal
+    description: Calendario y contactos
+    url: 'https://dav.lilyfeather.es'
+    method: GET
+    expectStatus: 200
+
+  - id: lf-calibre
+    name: Calibre
+    description: Biblioteca virtual
+    url: 'https://books.lilyfeather.es'
+    method: GET
+    expectStatus: 200
+
+  - id: lf-dav
+    name: Bloben
+    description: Cliente web para el calendario
+    url: 'https://calendar.lilyfeather.es'
     method: GET
     expectStatus: 200
