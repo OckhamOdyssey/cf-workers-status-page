@@ -49,12 +49,3 @@ monitors:
     method: GET
     expectStatus: 200
     followRedirect: true
-
-  - id: lf-dav
-    name: Bloben
-    description: Cliente web para el calendario
-    url: 'https://calendar.lilyfeather.es'
-    method: GET
-    expectStatus: 200
-    followRedirect: true
-
