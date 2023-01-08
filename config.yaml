@@ -41,11 +41,18 @@ monitors:
     expectStatus: 200
     followRedirect: true
 
-
   - id: lf-calibre
     name: Calibre
     description: Biblioteca virtual
     url: 'https://books.lilyfeather.es'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+
+  - id: lf-wiki
+    name: Bookstack
+    description: Wiki personal
+    url: 'https://wiki.lilyfeather.es'
     method: GET
     expectStatus: 200
     followRedirect: true
